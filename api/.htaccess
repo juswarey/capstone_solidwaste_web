@@ -1,0 +1,3 @@
+# XAMPP/Apache can drop the Authorization header before PHP sees it.
+# This passes it through so "Authorization: Bearer <token>" works.
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
